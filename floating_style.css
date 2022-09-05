@@ -1,0 +1,30 @@
+html, body {
+	background-color: #333;
+}
+
+.wave {
+	top: 30%;
+	left: 30%;
+	position: absolute;
+	font-size: 60px;
+	color: green;
+	-webkit-box-reflect: below -20px linear-gradient(transparent, rgba(172,235,171,0.2));
+}
+
+.wave span {
+	font-family: 'Verdana', cursive;
+	display: inline-block;
+	animation: wave-anim 2s infinite;
+	animation-delay: calc(0.1s * var(--item));
+}
+
+@keyframes wave-anim {
+	0%,
+	40%,
+	100% {
+		transform: translateY(0);
+	}
+	20% {
+		transform: translateY(-20px);
+	}
+}
